@@ -1,16 +1,16 @@
-### Hi there 👋
+## Hi there! 👋
 
-<!--
-**kyleconciso/kyleconciso** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### 📊 GitHub Stats
 
-Here are some ideas to get you started:
+![Kyle's GitHub Stats](https://github-readme-stats.vercel.app/api?username=kyleconciso&show_icons=true&theme=radical)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=kyleconciso&layout=compact&theme=radical)
+
+### 🛠️ Technologies & Tools
+- Python | TensorFlow | OpenCV | PyTorch
+- JavaScript | React | Node.js
+- Git | Docker | Linux
+
+### 🌱 Current Focus
+- **Machine Learning:** :contentReference[oaicite:2]{index=2}&#8203;:contentReference[oaicite:3]{index=3}
+- **Languages:** :contentReference[oaicite:4]{index=4}&#8203;:contentReference[oaicite:5]{index=5}
