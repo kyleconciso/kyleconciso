@@ -10,7 +10,3 @@
 - Python | TensorFlow | OpenCV | PyTorch
 - JavaScript | React | Node.js
 - Git | Docker | Linux
-
-### 🌱 Current Focus
-- **Machine Learning:** :contentReference[oaicite:2]{index=2}&#8203;:contentReference[oaicite:3]{index=3}
-- **Languages:** :contentReference[oaicite:4]{index=4}&#8203;:contentReference[oaicite:5]{index=5}
