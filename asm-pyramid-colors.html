@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASM Pyramid and Colors - Project Details</title>
+    <style>
+      :root {
+        --bg-color: #f4f4f4;
+        --text-color: #333;
+        --link-color: #0077cc;
+        --border-color: #ddd;
+        --header-color: #111;
+        --subtle-color: #666;
+        --code-bg-color: #e9e9e9;
+        --pre-bg-color: #fafafa;
+      }
+      [data-theme="dark"] {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --link-color: #58a6ff;
+        --border-color: #333;
+        --header-color: #f0f0f0;
+        --subtle-color: #999;
+        --code-bg-color: #2a2a2a;
+        --pre-bg-color: #1e1e1e;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 1.7;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.3s, color 0.3s;
+        padding: 2rem;
+      }
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+      }
+      h1,
+      h2,
+      h3 {
+        color: var(--header-color);
+        line-height: 1.3;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style-position: inside;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+      }
+      li {
+        margin-bottom: 0.5rem;
+      }
+      code {
+        font-family: "SF Mono", "Fira Code", monospace;
+        background-color: var(--code-bg-color);
+        color: var(--subtle-color);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+      }
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        margin: 2rem 0;
+        border-radius: 8px;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .project-links a {
+        margin-right: 1.5rem;
+      }
+      .theme-switcher {
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
+        cursor: pointer;
+        background: none;
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        width: 36px;
+        height: 36px;
+        color: var(--text-color);
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+      <h1>ASM Pyramid and Colors</h1>
+
+      <div class="project-links">
+        <a
+          href="https://www.github.com/kyleconciso/asm-pyramid-colors"
+          target="_blank"
+          >View Repository &rarr;</a
+        >
+      </div>
+
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/eh8ZevjQiRs"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <h2>Overview</h2>
+      <p>
+        This project consists of two separate x86 Assembly language programs for
+        a DOS environment. Each program demonstrates fundamental concepts in
+        low-level programming: one for iterative pattern generation (a numerical
+        pyramid) and another for basic graphical output (colored squares) using
+        BIOS and DOS interrupts.
+      </p>
+
+      <h2>Technologies Used</h2>
+      <p>
+        <code>x86 Assembly</code> <code>DOS BIOS (int 10H)</code>
+        <code>DOS Services (int 21H)</code>
+      </p>
+
+      <h2>Projects</h2>
+      <h3>1. Pyramid Drawing</h3>
+      <h4>Logic Breakdown</h4>
+      <p>
+        This program draws a right-aligned pyramid of numbers on the console. It
+        uses nested loops controlled by the <code>CX</code> register. The outer
+        loop manages the rows, a second loop prints an increasing number of
+        spaces for indentation, and a third loop prints a decreasing sequence of
+        incrementing digits (e.g., '0123...', '012...', '01...').
+        <code>PUSH CX</code> and <code>POP CX</code> are used to save and
+        restore the outer loop's counter to prevent interference from the nested
+        loops. Character output is handled by loading the character into the
+        <code>DL</code> register and calling DOS interrupt
+        <code>int 21h</code> with <code>AH=2</code>.
+      </p>
+
+      <h3>2. Color Squares</h3>
+      <h4>Logic Breakdown</h4>
+      <p>
+        This program demonstrates basic graphics in text mode by manipulating
+        the screen buffer via BIOS video services (<code>int 10H</code>). First,
+        it clears the entire screen by setting the function to scroll/clear
+        (<code>MOV AH, 6</code>), targeting the whole window (<code
+          >MOV AL, 0</code
+        >), and setting the video attribute in the <code>BH</code> register to
+        blue (<code>00010001b</code>). Then, it draws two solid red squares by
+        setting the video attribute to red (<code>01000001b</code>) and calling
+        <code>int 10H</code> again for specific screen coordinate ranges defined
+        by the <code>CH/CL</code> (top-left) and
+        <code>DH/DL</code> (bottom-right) registers.
+      </p>
+    </div>
+    <button id="theme-switcher" class="theme-switcher" title="Toggle dark mode">
+      ◐
+    </button>
+    <script>
+      const themeSwitcher = document.getElementById("theme-switcher");
+      const doc = document.documentElement;
+      const savedTheme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      doc.setAttribute("data-theme", savedTheme);
+      themeSwitcher.addEventListener("click", () => {
+        const currentTheme = doc.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        doc.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      });
+    </script>
+  </body>
+</html>

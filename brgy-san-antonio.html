@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brgy. San Antonio Community Hub - Project Details</title>
+    <style>
+      :root {
+        --bg-color: #f4f4f4;
+        --text-color: #333;
+        --link-color: #0077cc;
+        --border-color: #ddd;
+        --header-color: #111;
+        --subtle-color: #666;
+        --code-bg-color: #e9e9e9;
+        --pre-bg-color: #fafafa;
+      }
+      [data-theme="dark"] {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --link-color: #58a6ff;
+        --border-color: #333;
+        --header-color: #f0f0f0;
+        --subtle-color: #999;
+        --code-bg-color: #2a2a2a;
+        --pre-bg-color: #1e1e1e;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 1.7;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.3s, color 0.3s;
+        padding: 2rem;
+      }
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+      }
+      h1,
+      h2,
+      h3 {
+        color: var(--header-color);
+        line-height: 1.3;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style-position: inside;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+      }
+      li {
+        margin-bottom: 0.5rem;
+      }
+      code {
+        font-family: "SF Mono", "Fira Code", monospace;
+        background-color: var(--code-bg-color);
+        color: var(--subtle-color);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+      .tech-tags code {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+      }
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        margin: 2rem 0;
+        border-radius: 8px;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .project-links a {
+        margin-right: 1.5rem;
+      }
+      .theme-switcher {
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
+        cursor: pointer;
+        background: none;
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        width: 36px;
+        height: 36px;
+        color: var(--text-color);
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+      <h1>Brgy. San Antonio Community Hub</h1>
+
+      <!-- <div class="project-links">
+        <a href="#" target="_blank">View Repository &rarr;</a>
+        <a href="#" target="_blank">Live Demo &rarr;</a>
+      </div> -->
+
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/xqIp5v3NNJ8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <h2>Overview</h2>
+      <p>
+        The "Brgy. San Antonio Community Hub" is a comprehensive web application
+        designed to serve as the main online platform for Barangay San Antonio,
+        Candon City. It aims to enhance communication, streamline services, and
+        improve community engagement between residents and barangay officials.
+        The project incorporates modern web technologies, AI-powered features,
+        and accessibility options to cater to a diverse user base.
+      </p>
+
+      <h2>Technologies Used</h2>
+      <div class="tech-tags">
+        <p>
+          <strong>Frontend:</strong> <code>React</code>
+          <code>Material UI (MUI)</code> <code>react-router-dom</code>
+          <code>axios</code> <code>framer-motion</code>
+        </p>
+        <p>
+          <strong>Backend:</strong> <code>Node.js</code>
+          <code>Express.js</code> <code>Firebase Admin SDK</code>
+          <code>Genkit (Gemini)</code>
+        </p>
+        <p>
+          <strong>Database:</strong> <code>Firebase Firestore</code>
+          <code>Firebase Authentication</code>
+        </p>
+        <p>
+          <strong>Deployment:</strong> <code>Docker</code>
+          <code>Google Cloud Run</code>
+        </p>
+        <p><strong>Development:</strong> <code>Git</code></p>
+      </div>
+
+      <h2>Architecture and Structure</h2>
+      <p>
+        The system employs a client-server architecture with a clear separation
+        of concerns between the frontend and backend.
+      </p>
+      <h3>Client (Frontend)</h3>
+      <p>
+        A Single-Page Application (SPA) built with React, located in the
+        <code>client/</code> directory. The structure is organized for
+        scalability:
+      </p>
+      <ul>
+        <li>
+          <code>components/</code>: Contains reusable UI elements like layouts,
+          navigation, and widgets.
+        </li>
+        <li>
+          <code>pages/</code>: Holds the main application screens (Admin,
+          Public, User).
+        </li>
+        <li>
+          <code>api/</code>: Manages client-side API call functions that
+          interact with the Express backend.
+        </li>
+        <li>
+          <code>contexts/</code>: Manages global state, such as
+          <code>AuthContext</code> for user authentication.
+        </li>
+        <li>
+          <code>hooks/</code>: Contains custom React hooks like
+          <code>useApi</code> and <code>useAuth</code> to abstract complex
+          logic.
+        </li>
+        <li>
+          <code>App.js</code>: The main application component that defines
+          routing and the overall layout.
+        </li>
+      </ul>
+      <h3>Server (Backend)</h3>
+      <p>
+        A Node.js Express application located in the
+        <code>server/</code> directory. Key files and logic include:
+      </p>
+      <ul>
+        <li>
+          <code>app.js</code>: Initializes the Firebase Admin SDK and sets up
+          all middleware and routes.
+        </li>
+        <li>
+          <strong>Middleware:</strong> Implements
+          <code>authenticate</code> middleware to verify Firebase ID tokens on
+          protected routes, and <code>isAdmin</code> /
+          <code>isEmployeeOrAdmin</code> for role-based authorization.
+        </li>
+        <li>
+          <strong>REST API:</strong> Defines a comprehensive set of RESTful
+          routes under <code>/api/v1/</code> for Authentication, Content
+          Management (pages, articles), a Ticket System, User Management, and
+          the AI Chatbot.
+        </li>
+      </ul>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>
+          <strong>User Authentication & Authorization:</strong> Secure
+          registration and login using Firebase Authentication. The backend
+          enforces role-based access control (ADMIN, EMPLOYEE, RESIDENT) for
+          different API endpoints.
+        </li>
+        <li>
+          <strong>Content Management System (CMS):</strong> Admins and employees
+          can dynamically manage web content through a dashboard. A generic
+          <code>ManagementPage</code> React component is used for CRUD
+          operations across different content types (articles, pages, forms),
+          promoting code reusability. A rich text editor
+          (<code>react-quill</code>) is integrated for dynamic content creation.
+        </li>
+        <li>
+          <strong>Ticket/Concern System:</strong> Logged-in residents can submit
+          tickets which are then managed by staff. Staff can update ticket
+          statuses (OPEN, IN_PROGRESS, CLOSED) and communicate with residents
+          via an integrated messaging system within the ticket.
+        </li>
+        <li>
+          <strong>AI Chatbot:</strong> A "Barangay Assistant" powered by Google
+          Genkit and Gemini is trained on the public data in the Firestore
+          database. It maintains conversational context to provide relevant
+          answers to common queries about the barangay.
+        </li>
+      </ul>
+    </div>
+    <button id="theme-switcher" class="theme-switcher" title="Toggle dark mode">
+      ◐
+    </button>
+    <script>
+      const themeSwitcher = document.getElementById("theme-switcher");
+      const doc = document.documentElement;
+      const savedTheme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      doc.setAttribute("data-theme", savedTheme);
+      themeSwitcher.addEventListener("click", () => {
+        const currentTheme = doc.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        doc.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      });
+    </script>
+  </body>
+</html>

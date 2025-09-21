@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moonhold - Project Details</title>
+    <style>
+      :root {
+        --bg-color: #f4f4f4;
+        --text-color: #333;
+        --link-color: #0077cc;
+        --border-color: #ddd;
+        --header-color: #111;
+        --subtle-color: #666;
+        --code-bg-color: #e9e9e9;
+        --pre-bg-color: #fafafa;
+      }
+      [data-theme="dark"] {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --link-color: #58a6ff;
+        --border-color: #333;
+        --header-color: #f0f0f0;
+        --subtle-color: #999;
+        --code-bg-color: #2a2a2a;
+        --pre-bg-color: #1e1e1e;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 1.7;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.3s, color 0.3s;
+        padding: 2rem;
+      }
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--header-color);
+        line-height: 1.3;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+      h4 {
+        font-size: 1.1rem;
+        color: var(--subtle-color);
+        font-weight: 500;
+      }
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style-position: inside;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+      }
+      li {
+        margin-bottom: 0.5rem;
+      }
+      code {
+        font-family: "SF Mono", "Fira Code", monospace;
+        background-color: var(--code-bg-color);
+        color: var(--text-color);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+      pre {
+        background-color: var(--pre-bg-color);
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        overflow-x: auto;
+        font-size: 0.9rem;
+      }
+      pre code {
+        background-color: transparent;
+        padding: 0;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+      }
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        margin: 2rem 0;
+        border-radius: 8px;
+      }
+      .video-container iframe,
+      .video-placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #222;
+        color: #999;
+      }
+      .project-links a {
+        margin-right: 1.5rem;
+      }
+      .theme-switcher {
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
+        cursor: pointer;
+        background: none;
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        width: 36px;
+        height: 36px;
+        color: var(--text-color);
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+      <h1>Moonhold</h1>
+
+      <div class="project-links">
+        <a href="https://www.github.com/Cedeli/Moonhold" target="_blank"
+          >View Repository &rarr;</a
+        >
+      </div>
+
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/HnkRQcFimBY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <section id="overview">
+        <h2>Project Overview</h2>
+        <p>
+          "Moonhold" is a Godot Engine game developed for the MGC Summer Gamejam
+          2025. The core premise involves players surviving an alien horde on a
+          celestial body until their ship is ready for ignition. The game
+          features a 3D environment, custom physics and gravity systems tailored
+          for spherical worlds, procedural planet generation, and a robust C#
+          backend for game logic, UI, and system management.
+        </p>
+      </section>
+
+      <section id="my-role">
+        <h2>My Role & Contributions</h2>
+        <p>
+          This project was created by a team of three for the MGC Summer Gamejam
+          2025. As the project's architect, I was specifically responsible for
+          the following:
+        </p>
+        <ul>
+          <li>
+            <strong>Core Systems Architecture:</strong> I designed and
+            implemented the game's core architecture, including all foundational
+            manager systems in C# (scene, audio, input, settings).
+          </li>
+          <li>
+            <strong>Game & Entity Logic:</strong> I developed the primary game
+            loop and the C# scripts for all major game entities (Player, Alien,
+            Ship, Items), defining their behaviors, state management, and
+            interaction logic.
+          </li>
+          <li>
+            <strong>UI Implementation:</strong> I was responsible for scripting
+            the UI scenes, including the main menu, HUD, and pause screens, and
+            connecting them to the backend game logic.
+          </li>
+        </ul>
+      </section>
+
+      <section id="architecture">
+        <h2>Architecture</h2>
+        <p>
+          The codebase follows a modular design, leveraging Godot's node-based
+          architecture and C# scripting. Key components are organized into
+          logical directories, promoting separation of concerns and reusability.
+          The project uses autoloads (singletons) for global systems like
+          <code>AudioManager</code>, <code>SettingsManager</code>, and
+          <code>SceneManager</code>.
+        </p>
+
+        <h3>High-Level Structure:</h3>
+        <ul>
+          <li>
+            <strong>Core/:</strong> Foundational systems for application-wide
+            management (Audio, Settings, Scene transitions, Context).
+          </li>
+          <li>
+            <strong>Input/:</strong> Dedicated input handling system,
+            abstracting input sources and providing buffering capabilities.
+          </li>
+          <li>
+            <strong>Entity/:</strong> Game objects (Player, Enemies, Ship,
+            Celestial Bodies, Items, Projectiles) with their unique logic and
+            behaviors.
+          </li>
+          <li>
+            <strong>Scenes/:</strong> Defines the game's flow and UI screens
+            (Main Menu, Game, HUD, etc.).
+          </li>
+          <li>
+            <strong>Assets/:</strong> All game resources including 3D models,
+            audio, textures, and custom shaders.
+          </li>
+          <li>
+            <strong>Util/:</strong> Helper classes and resource definitions,
+            particularly for procedural generation parameters.
+          </li>
+        </ul>
+      </section>
+
+      <section id="core-systems">
+        <h2>Core Systems</h2>
+        <h3>Scene Management (Core/Scene)</h3>
+        <p>
+          A global singleton <code>SceneManager.cs</code> manages the game's
+          scenes as a stack. It handles transitions like pushing a pause menu or
+          replacing the main menu. Scenes inherit from a base
+          <code>Scene.cs</code> class, which provides lifecycle methods
+          (<code>DidLoad</code>, <code>OnEnter</code>, <code>OnExit</code>,
+          etc.) and uses a <code>Context.cs</code> object for passing data
+          between scenes.
+        </p>
+
+        <h3>Audio & Settings Management (Core/)</h3>
+        <p>
+          <code>AudioManager.cs</code> is a global singleton for playing BGM and
+          SFX, using a pool of <code>AudioStreamPlayer</code> nodes for
+          efficiency. It integrates with Godot's AudioServer to control volumes.
+          <code>SettingsManager.cs</code> persists settings like audio volumes
+          and visual toggles to a config file (<code>user://settings.cfg</code>)
+          and emits signals on change.
+        </p>
+
+        <h3>Input System (Input/)</h3>
+        <p>
+          <code>InputManager.cs</code> orchestrates input events from providers
+          (e.g., <code>KeyboardMouseInput.cs</code>) and dispatches them to
+          receivers that implement the <code>IInputReceiver.cs</code> interface
+          (like the Player). An <code>InputBuffer.cs</code> utility makes
+          actions like jumping more forgiving by buffering them for a short
+          time.
+        </p>
+
+        <h3>Custom Physics & Gravity (Entity/GravityEntity.cs)</h3>
+        <p>
+          <code>GravityEntity.cs</code> is a base class for RigidBody3D nodes
+          needing to interact with spherical gravity. It automatically detects
+          the nearest <code>CelestialBody</code> as a gravity source, calculates
+          the gravity vector, and smoothly aligns the entity's orientation to
+          the planet's surface. A <code>ShapeCast3D</code> is used for ground
+          detection.
+        </p>
+
+        <h3>Planetary Generation (Entity/Planet/ & Assets/Shaders/)</h3>
+        <p>
+          The <code>Planet.cs</code> node uses a
+          <code>SphereGenerator.cs</code> to create a base mesh, which is then
+          sculpted by a compute shader defined in <code>PlanetHeight.cs</code>.
+          This resource references <code>PlanetHeight.glsl</code> and exposes
+          configurable noise settings (<code>SimplexNoiseSettings.cs</code>,
+          <code>RidgeNoiseSettings.cs</code>) to the editor. The compute shader
+          applies multiple layers of fractal noise to generate varied terrain,
+          and the final mesh can be used to generate a
+          <code>TrimeshShape</code> for collision.
+        </p>
+      </section>
+
+      <section id="entity-reference">
+        <h2>Key Entity Reference</h2>
+        <ul>
+          <li>
+            <strong>Player.cs:</strong> Implements
+            <code>IInputReceiver</code> to handle inputs. Uses a custom
+            <code>PlanetaryMovementController</code> for physics-based movement
+            and manages health, camera, and weapon interactions.
+          </li>
+          <li>
+            <strong>Alien.cs:</strong> Features basic AI to find and move
+            towards the player or ship, attacking when in range.
+          </li>
+          <li>
+            <strong>CelestialBody.cs:</strong> Base class for planets. Acts as a
+            gravity source and supports basic orbital mechanics.
+          </li>
+          <li>
+            <strong>Gun.cs:</strong> Manages ammunition, fire rate, reloading,
+            and temporary stat modifications from power-ups.
+          </li>
+          <li>
+            <strong>Item System (Item/):</strong> A base
+            <code>Item.cs</code> class handles visual effects and player
+            collision. Derived classes like <code>AmmoItem</code>,
+            <code>HealthItem</code>, and <code>PowerupItem</code> apply specific
+            effects to the player or ship upon collection.
+          </li>
+        </ul>
+      </section>
+
+      <section id="shaders">
+        <h2>Shaders & Graphics</h2>
+        <p>
+          The project leverages custom GLSL and Godot shaders for its visual
+          style and procedural generation.
+        </p>
+        <ul>
+          <li>
+            <strong><code>PlanetHeight.glsl</code>:</strong> A compute shader
+            that generates terrain heightmaps using multiple layers of Simplex
+            and Ridge noise.
+          </li>
+          <li>
+            <strong><code>Planet.gdshader</code>:</strong> A spatial shader that
+            colors the planet's surface based on altitude and applies
+            roughness/metallic properties.
+          </li>
+          <li>
+            <strong><code>Water.gdshader</code>:</strong> Renders a water
+            surface with depth-based coloring and foam effects near the shore by
+            sampling from the <code>DEPTH_TEXTURE</code>.
+          </li>
+          <li>
+            <strong
+              ><code>space.gdshader</code> &
+              <code>space_2d.gdshader</code>:</strong
+            >
+            Sky and CanvasItem shaders for rendering dynamic, twinkling starry
+            backgrounds in 3D and 2D scenes respectively.
+          </li>
+        </ul>
+      </section>
+
+      <section id="tech-stack">
+        <h2>Technology Stack</h2>
+        <ul>
+          <li><strong>Game Engine:</strong> Godot Engine 4.4+</li>
+          <li><strong>Scripting Language:</strong> C# (.NET 8.0)</li>
+          <li>
+            <strong>Shader Language:</strong> GLSL (for compute) & Godot Shader
+            Language
+          </li>
+          <li>
+            <strong>Development Environment:</strong> Visual Studio / VS Code
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <button id="theme-switcher" class="theme-switcher" title="Toggle dark mode">
+      ◐
+    </button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeSwitcher = document.getElementById("theme-switcher");
+        const doc = document.documentElement;
+        const savedTheme =
+          localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+        doc.setAttribute("data-theme", savedTheme);
+        themeSwitcher.addEventListener("click", () => {
+          const currentTheme = doc.getAttribute("data-theme");
+          const newTheme = currentTheme === "dark" ? "light" : "dark";
+          doc.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+        });
+      });
+    </script>
+  </body>
+</html>

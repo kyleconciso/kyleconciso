@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Adoption MySQL Spring - Project Details</title>
+    <style>
+      :root {
+        --bg-color: #f4f4f4;
+        --text-color: #333;
+        --link-color: #0077cc;
+        --border-color: #ddd;
+        --header-color: #111;
+        --subtle-color: #666;
+        --code-bg-color: #e9e9e9;
+        --pre-bg-color: #fafafa;
+      }
+      [data-theme="dark"] {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --link-color: #58a6ff;
+        --border-color: #333;
+        --header-color: #f0f0f0;
+        --subtle-color: #999;
+        --code-bg-color: #2a2a2a;
+        --pre-bg-color: #1e1e1e;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 1.7;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.3s, color 0.3s;
+        padding: 2rem;
+      }
+      .container {
+        max-width: 800px;
+        margin: 2rem auto;
+      }
+      h1,
+      h2,
+      h3 {
+        color: var(--header-color);
+        line-height: 1.3;
+        font-weight: 600;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+      a {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      ul {
+        list-style-position: inside;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+      }
+      li {
+        margin-bottom: 0.5rem;
+      }
+      code {
+        font-family: "SF Mono", "Fira Code", monospace;
+        background-color: var(--code-bg-color);
+        color: var(--subtle-color);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+      .tech-tags code {
+        margin-right: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+      }
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        margin: 2rem 0;
+        border-radius: 8px;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .project-links a {
+        margin-right: 1.5rem;
+      }
+      .theme-switcher {
+        position: fixed;
+        top: 1.5rem;
+        right: 1.5rem;
+        cursor: pointer;
+        background: none;
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        width: 36px;
+        height: 36px;
+        color: var(--text-color);
+        font-size: 1.1rem;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+      <h1>Dog Adoption MySQL Spring</h1>
+
+      <div class="project-links">
+        <a
+          href="https://www.github.com/kyleconciso/dog-adoption"
+          target="_blank"
+          >View Repository &rarr;</a
+        >
+      </div>
+
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/cH2ttRd1eUE"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <h2>Overview</h2>
+      <p>
+        This is a full-stack application for a dog adoption agency, featuring an
+        Angular frontend and a Spring Boot backend. It provides functionalities
+        for users to browse available dogs and submit adoption requests, while
+        administrators can manage the pet listings and process adoption
+        applications.
+      </p>
+
+      <h2>Technologies Used</h2>
+      <div class="tech-tags">
+        <p><strong>Frontend:</strong> <code>Angular</code></p>
+        <p><strong>Backend:</strong> <code>Spring Boot (Java)</code></p>
+        <p>
+          <strong>Database:</strong> <code>MySQL</code>
+          <code>JPA (Hibernate)</code>
+        </p>
+        <p><strong>Build Tool:</strong> <code>Maven</code></p>
+      </div>
+
+      <h2>Architecture and Structure</h2>
+      <p>
+        The project adopts a classic client-server architecture, with the Spring
+        Boot application following an MVC (Model-View-Controller) pattern for
+        its backend.
+      </p>
+      <h3>Backend (Spring Boot Server)</h3>
+      <ul>
+        <li>
+          <strong>Controllers:</strong> The
+          <code>AdoptionController</code> manages API endpoints for adoption
+          requests, while the <code>DogController</code> handles API endpoints
+          for dog listings (CRUD operations).
+        </li>
+        <li>
+          <strong>Models:</strong> Data models like <code>Adoption</code> and
+          <code>Dog</code> are defined as classes with JPA annotations to map
+          them to database tables.
+        </li>
+        <li>
+          <strong>Repositories:</strong> Interfaces such as
+          <code>AdoptionRepository</code> extend Spring's
+          <code>JpaRepository</code> to leverage automatic CRUD operations
+          without writing boilerplate code.
+        </li>
+        <li>
+          <strong>Services:</strong> Classes like
+          <code>AdoptionService</code> and <code>DogService</code> contain the
+          core business logic, separating it from the controller layer.
+        </li>
+      </ul>
+      <h3>Frontend (Angular Application)</h3>
+      <ul>
+        <li>
+          <strong>User Interface:</strong> Designed with reusable Angular
+          components. It includes dedicated sections like
+          <code>AdminComponent</code> and <code>UserComponent</code> for
+          different user roles.
+        </li>
+        <li>
+          <strong>Routing:</strong> Defines the navigation paths between
+          application pages for a seamless single-page application experience.
+        </li>
+      </ul>
+    </div>
+    <button id="theme-switcher" class="theme-switcher" title="Toggle dark mode">
+      ◐
+    </button>
+    <script>
+      const themeSwitcher = document.getElementById("theme-switcher");
+      const doc = document.documentElement;
+      const savedTheme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      doc.setAttribute("data-theme", savedTheme);
+      themeSwitcher.addEventListener("click", () => {
+        const currentTheme = doc.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        doc.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      });
+    </script>
+  </body>
+</html>
