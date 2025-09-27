@@ -16,7 +16,7 @@ I'm a Computer Science student from the Philippines 🇵🇭. I build software t
 | Project                                                                      | Description                                      | Stack                                 |
 | :--------------------------------------------------------------------------- | :----------------------------------------------- | :------------------------------------ |
 | **[Brgy. San Antonio Hub](https://github.com/kyleconciso/brgy-san-antonio)** | Full-stack community portal with an AI chatbot   | `React` `Node.js` `Firebase` `Genkit` |
-| **[Helix Interpreter](https://github.com/kyleconciso/helix-interpreter)**    | A custom programming language from scratch       | `Python` `ANTLR`                      |
+| **[Helix Interpreter](https://github.com/kyleconciso/helix-interpreter)**    | An interpreter for a custom programming language | `Python` `ANTLR`                      |
 | **[E-commerce App](https://github.com/kyleconciso/aling-narcing-ecommerce)** | Native Android app with a Java/WebSocket backend | `Android` `Kotlin` `Java`             |
 
 ---
